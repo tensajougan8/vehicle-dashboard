@@ -48,7 +48,7 @@ export class VehicleController {
   @CacheKey('custom_key')
   @CacheTTL(50)
   @Get()
-  @ApiResponse({ status: 200, description: 'List of vehicles' })
+  @ApiResponse({ status: 200, description: 'List of vehicles owned by the user' })
   findAll(@Request() req, @Query('page') page: number | 1) {
     const limit: number = 10;
     const id = req.user._id;

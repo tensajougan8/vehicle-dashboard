@@ -10,9 +10,7 @@ export type SocketIOMiddleware = {
 export const SocketAuthMiddleware = (): SocketIOMiddleware => {
   return (client, next) => {
     try {
-      Logger.log('test');
       WsJwtGuard.validateToken(client);
-      UsersService
       next();
     } catch (error) {
       next(error);

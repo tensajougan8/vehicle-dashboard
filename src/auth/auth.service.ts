@@ -60,6 +60,6 @@ export class AuthService {
   }
 
   async verifyJwtToken(payload: any) {
-    return  this.jwtService.verify(payload);    
+    return this.jwtService.verify(payload);
   }
 }
